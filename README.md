@@ -3,7 +3,7 @@
 BPL Dream 11 is a modern, responsive web application that allows users to build their ultimate fantasy cricket team. Users can manage a virtual budget, select world-class players, and organize their squad through a sleek and intuitive interface.
 
 ## 🚀 Live Demo
-[[\\[Add your live link here\\]](https://bpl-dream11743.netlify.app/)]
+[[\\[ live link here\\]](https://bpl-dream11743.netlify.app/)]
 
 ## ✨ Features
 
