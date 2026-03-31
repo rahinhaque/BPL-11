@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaUser, FaFlag, FaBolt } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const PlayerCard = ({
   player,
@@ -9,7 +10,9 @@ const PlayerCard = ({
   setSelectedPlayers,
 }) => {
   // ✅ receive props
-  const isSelected = seletedPlayers.some((p) => p.playerName === player.playerName);
+  const isSelected = seletedPlayers.some(
+    (p) => p.playerName === player.playerName,
+  );
 
   return (
     <div className="card bg-base-100 shadow-xl border border-gray-100 rounded-2xl overflow-hidden flex flex-col">
@@ -74,19 +77,20 @@ const PlayerCard = ({
             <button
               onClick={() => {
                 if (isSelected) {
-                  alert("Player already selected!");
+                  toast.error("Player already selected!");
                   return;
                 }
                 if (seletedPlayers.length >= 6) {
-                  alert("You can only select up to 6 players!");
+                  toast.warning("You can only select up to 6 players!");
                   return;
                 }
                 if (Number(coins) < Number(player.price)) {
-                  alert("Not enough coins!");
+                  toast.error("Not enough coins!");
                   return;
                 }
                 setCoins(Number(coins) - Number(player.price));
                 setSelectedPlayers([...seletedPlayers, player]);
+                toast.success(`${player.playerName} added to your team!`);
               }}
               disabled={isSelected}
               className="btn btn-outline btn-sm border-gray-300 hover:bg-yellow-400 hover:border-yellow-400 hover:text-gray-900 transition-all rounded-xl font-bold text-xs px-5 h-10 min-h-0"
@@ -100,7 +104,13 @@ const PlayerCard = ({
   );
 };
 
-const Card = ({ players, setCoins, coins, seletedPlayers, setSelectedPlayers }) => {
+const Card = ({
+  players,
+  setCoins,
+  coins,
+  seletedPlayers,
+  setSelectedPlayers,
+}) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {players.map((player, index) => (

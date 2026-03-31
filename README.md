@@ -3,12 +3,13 @@
 BPL Dream 11 is a modern, responsive web application that allows users to build their ultimate fantasy cricket team. Users can manage a virtual budget, select world-class players, and organize their squad through a sleek and intuitive interface.
 
 ## 🚀 Live Demo
+
 [[\\[ live link here\\]](https://bpl-dream11743.netlify.app/)]
 
 ## ✨ Features
 
 - **Dynamic Player Roster**: Browse a diverse list of players with detailed stats (Rating, Batting/Bowling Style).
-- **Coin-Based Economy**: 
+- **Coin-Based Economy**:
   - Start with a base balance.
   - "Claim Free Credit" to add 500,000 coins instantly.
   - Automatic deduction and refund of coins when selecting or removing players.
@@ -29,6 +30,7 @@ BPL Dream 11 is a modern, responsive web application that allows users to build 
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/)
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Notifications**: [React Toastify](https://fkhadra.github.io/react-toastify/introduction/)
 - **Loading Indicators**: [React Spinners](https://www.davidhu.me/react-spinners/)
 - **State Management**: React Hooks (`useState`, `useEffect`)
 - **Data Fetching**: React 19 `use()` hook with `fetch` API
@@ -36,21 +38,25 @@ BPL Dream 11 is a modern, responsive web application that allows users to build 
 ## 📦 Installation & Setup
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/your-username/BPL11-app.git
    ```
 
 2. **Navigate to the project directory**:
+
    ```bash
    cd BPL11-app
    ```
 
 3. **Install dependencies**:
+
    ```bash
    npm install
    ```
 
 4. **Run the development server**:
+
    ```bash
    npm run dev
    ```
@@ -81,4 +87,5 @@ src/
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
 ---
+
 Built with ❤️ by Rahin Haque
